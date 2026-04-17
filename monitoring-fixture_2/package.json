@@ -1,9 +1,13 @@
 {
-  "name": "monitoring-fixture",
+  "name": "monitoring-fixture-2",
   "version": "1.0.0",
   "private": true,
-  "description": "Fixture para validar monitoramento de CVEs no GitHub Actions",
+  "description": "Projeto vulneravel para testar PR automatico do Dependabot",
+  "scripts": {
+    "start": "node index.js"
+  },
   "dependencies": {
+    "lodash": "4.17.19",
     "minimist": "0.0.8"
   }
 }
