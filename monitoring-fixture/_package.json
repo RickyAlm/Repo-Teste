@@ -1,0 +1,9 @@
+{
+  "name": "monitoring-fixture",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Fixture para validar monitoramento de CVEs no GitHub Actions",
+  "dependencies": {
+    "minimist": "0.0.8"
+  }
+}
