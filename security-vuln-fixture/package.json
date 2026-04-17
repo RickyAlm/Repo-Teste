@@ -1,0 +1,9 @@
+{
+  "name": "security-vuln-fixture",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Projeto de teste intencionalmente vulneravel para validar scan de CVE",
+  "dependencies": {
+    "minimist": "0.0.8"
+  }
+}
