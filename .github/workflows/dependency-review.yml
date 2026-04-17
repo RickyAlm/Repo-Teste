@@ -23,7 +23,9 @@ jobs:
       - name: OSV PR Gate
         uses: google/osv-scanner-action/osv-scanner-action@v2.3.5
         with:
+          fail-on-severity: high
           fail-on-vuln: true
           scan-args: |-
-            -r
+            --recursive
             .
+            --allow-no-lockfiles
