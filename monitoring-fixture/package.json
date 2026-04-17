@@ -4,6 +4,7 @@
   "private": true,
   "description": "Fixture para validar monitoramento de CVEs no GitHub Actions",
   "dependencies": {
-    "minimist": "1.2.8"
+    "lodash": "4.17.19",
+    "minimist": "0.0.8"
   }
 }
