@@ -17,10 +17,9 @@ jobs:
       - name: Dependency Review
         uses: actions/dependency-review-action@v4
         with:
+          fail-on-severity: high
           fail-on-vuln: true
           scan-args: |-
             --recursive
             .
             --allow-no-lockfiles
-
-          fail-on-severity: high
