@@ -9,3 +9,23 @@ updates:
     labels:
       - "dependencies"
       - "security"
+
+  - package-ecosystem: "npm"
+    directory: "/dependency-review-fixture"
+    schedule:
+      interval: "daily"
+    open-pull-requests-limit: 10
+    target-branch: "main"
+    labels:
+      - "dependencies"
+      - "security"
+
+  - package-ecosystem: "npm"
+    directory: "/invulnerability-fixture"
+    schedule:
+      interval: "daily"
+    open-pull-requests-limit: 10
+    target-branch: "main"
+    labels:
+      - "dependencies"
+      - "security"
