@@ -1,0 +1,10 @@
+{
+  "name": "repo-teste-vuln-check",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Projeto minimo vulneravel para validar esteira de monitoramento",
+  "dependencies": {
+    "lodash": "4.17.19",
+    "minimist": "0.0.8"
+  }
+}
