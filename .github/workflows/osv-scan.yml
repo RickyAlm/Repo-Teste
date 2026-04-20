@@ -2,7 +2,7 @@ name: OSV Scan
 
 on:
   schedule:
-    - cron: "0 9 * * *"
+    - cron: "0 9 * * 1"
   workflow_dispatch:
 
 permissions:
@@ -11,6 +11,7 @@ permissions:
 
 jobs:
   osv-scan:
+    name: osv-scan
     runs-on: ubuntu-latest
     env:
       FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: "true"

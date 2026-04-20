@@ -2,30 +2,22 @@ name: Dependency Review
 
 on:
   pull_request:
-    branches: [main]
-  merge_group:
-    branches: [main]
 
 permissions:
   contents: read
-  security-events: write
 
 jobs:
   dependency-review:
+    name: dependency-review
     runs-on: ubuntu-latest
-    env:
-      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: "true"
     permissions:
       contents: read
-      security-events: write
+      pull-requests: read
     steps:
-      - name: Checkout
+      - name: Checkout Repository
         uses: actions/checkout@v4
 
-      - name: OSV PR Gate
-        uses: google/osv-scanner-action/osv-scanner-action@v2.3.5
+      - name: Dependency Review
+        uses: actions/dependency-review-action@v4
         with:
-          scan-args: |-
-            --recursive
-            .
-            --allow-no-lockfiles
+          fail-on-severity: high
