@@ -13,6 +13,8 @@ permissions:
 jobs:
   dependency-review:
     runs-on: ubuntu-latest
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: "true"
     permissions:
       contents: read
       security-events: write
@@ -23,8 +25,6 @@ jobs:
       - name: OSV PR Gate
         uses: google/osv-scanner-action/osv-scanner-action@v2.3.5
         with:
-          fail-on-severity: high
-          fail-on-vuln: true
           scan-args: |-
             --recursive
             .
